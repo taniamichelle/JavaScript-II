@@ -1,6 +1,15 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+const addOne = () => {
+  let addOne = 0;
+  return () => {
+    addOne += addOne;
+    return addOne;
+  }
+};
+
+console.log(addOne());
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
