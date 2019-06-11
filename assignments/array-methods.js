@@ -94,8 +94,28 @@ console.log('total: ', ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1: We want runners' first and last names converted to uppercase.
+let allCapsFullName = [];
 
-// Problem 2
+allCapsFullName = fullName.map(name =>
+    name.toUpperCase());
 
-// Problem 3
+console.log(allCapsFullName);
+
+
+// Problem 2: We want to know if any runners' last name starts with 'X'
+const startsWithM = runners.findIndex(runner => {
+    return runner.last_name[0] === 'X' ? true : false;
+});
+
+console.log(startsWithM);
+
+
+// Problem 3: We want to know if any email accounts are gmail
+function emailContains(item, list, cb) {
+    cb(item.includes(list))
+}
+
+emailContains("gmail", runners, (checksList) => {
+    console.log(checksList)
+});
