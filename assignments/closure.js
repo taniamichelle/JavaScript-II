@@ -1,6 +1,22 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+// const addTo = (num) => {
+//   let add = () => {
+//     return num + addTo;
+//   };
+//   return add;
+// };
+
+// console.log(addTo(1));
+
+function addsNums(x, y, cb) {
+  cb(x + y);
+}
+
+addsNums(2, 2, function (numSum) {
+  console.log(numSum);
+})
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
